@@ -53,13 +53,6 @@ def construct_google_dork():
         for word in exclude_words.split():
             dork_parts.append(f"-{word}")
             
-    # Other advanced operators (e.g., cache:, related:, AROUND(), etc.) - Optional advanced input
-    # This gives the user flexibility to add anything not covered
-    other_operators = input("Any other specific Google Dork operators or keywords you want to add? (e.g., cache:example.com, 'password' AROUND(5) 'file') (Leave blank to skip): ").strip()
-    if other_operators:
-        dork_parts.append(other_operators)
-
-
     print("-" * 50)
     
     if not dork_parts:
